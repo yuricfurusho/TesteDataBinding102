@@ -1,10 +1,10 @@
-package yuricfurusho.testedatabinding101;
+package yuricfurusho.testedatabinding102;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import yuricfurusho.testedatabinding101.databinding.ActivityMainBinding;
+import yuricfurusho.testedatabinding102.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 

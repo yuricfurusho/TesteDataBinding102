@@ -6,7 +6,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "yuricfurusho.testedatabinding101"
+        applicationId "yuricfurusho.testedatabinding102"
         minSdkVersion 9
         targetSdkVersion 23
         versionCode 1

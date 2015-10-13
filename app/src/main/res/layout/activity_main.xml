@@ -7,7 +7,7 @@
 
         <variable
             name="user"
-            type="yuricfurusho.testedatabinding101.User" />
+            type="yuricfurusho.testedatabinding102.User" />
     </data>
 
     <RelativeLayout

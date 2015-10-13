@@ -1,4 +1,4 @@
-package yuricfurusho.testedatabinding101;
+package yuricfurusho.testedatabinding102;
 
 /**
  * Created by live on 13/10/15.
