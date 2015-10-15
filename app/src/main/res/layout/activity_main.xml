@@ -21,6 +21,24 @@
             layout="@layout/layout_user"
             bind:user="@{user}" />
 
+        <include
+            layout="@layout/layout_user"
+            bind:user="@{user}" />
+
+        <include
+            layout="@layout/layout_user"
+            bind:user="@{user}" />
+
+        <include
+            layout="@layout/layout_user"
+            bind:user="@{user}" />
+
+        <include
+            layout="@layout/layout_user"
+            bind:user="@{user}" />
+
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

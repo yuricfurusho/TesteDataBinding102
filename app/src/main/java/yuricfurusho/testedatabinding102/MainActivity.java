@@ -10,6 +10,8 @@ import yuricfurusho.testedatabinding102.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     Handler mHandler;
     User mUser;
+    private int count = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,22 +22,26 @@ public class MainActivity extends AppCompatActivity {
         binding.setUser(mUser);
     }
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//
-//        public void useHandler() {
-//            mHandler = new Handler();
-//            mHandler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    mUser.setFirstName("Yuri " + );
-//
-//
-//                }
-//            }, 1000);
-//        }
-//
-//    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+
+        mHandler = new Handler();
+        mHandler.postDelayed(runnable(), 1000);
+
+
+    }
+
+    private Runnable runnable() {
+        return new Runnable() {
+            @Override
+            public void run() {
+                mUser.setFirstName("Yuri " + count++);
+
+
+                mHandler.postDelayed(runnable(), 1000);
+            }
+        };
+    }
 }
