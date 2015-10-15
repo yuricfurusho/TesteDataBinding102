@@ -12,6 +12,7 @@ public class User extends BaseObservable {
     public String firstName;
     public String lastName;
     public String email;
+    public String login;
     public int lastNameColor;
     public boolean status;
 
@@ -19,6 +20,7 @@ public class User extends BaseObservable {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.login = login;
         this.status = true;
     }
 
@@ -51,6 +53,14 @@ public class User extends BaseObservable {
         this.email = email;
     }
 
+    @Bindable
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
 
     @Bindable
     public int getLastNameColor() {
