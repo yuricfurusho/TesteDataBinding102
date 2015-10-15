@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TesteDataBinding102</string>
+    <string name="first_name_not_provided">First Name Not Provided</string>
 </resources>

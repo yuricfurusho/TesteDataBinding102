@@ -11,14 +11,15 @@ import android.view.View;
 public class User extends BaseObservable {
     public String firstName;
     public String lastName;
+    public String email;
     public int lastNameColor;
     public boolean status;
 
-    public User(Context context, String firstName, String lastName) {
+    public User(Context context, String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.email = email;
         this.status = true;
-        updateLastNameColor(context);
     }
 
     @Bindable
@@ -42,21 +43,31 @@ public class User extends BaseObservable {
     }
 
     @Bindable
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+    @Bindable
     public int getLastNameColor() {
         return this.lastNameColor;
     }
 
-    public void updateLastNameColor(Context context) {
-        if (status) {
-            this.lastNameColor = context.getResources().getColor(android.R.color.holo_green_dark);
-        } else {
-            this.lastNameColor = context.getResources().getColor(android.R.color.holo_red_dark);
-        }
-        status = !status;
-        notifyPropertyChanged(yuricfurusho.testedatabinding102.BR.lastNameColor);
+    @Bindable
+    public boolean getStatus() {
+        return this.status;
     }
 
     public void onClickLastName(View view) {
-        updateLastNameColor(view.getContext());
+        flipStatus();
+    }
+
+    public void flipStatus() {
+        this.status = !this.status;
+        notifyPropertyChanged(yuricfurusho.testedatabinding102.BR.status);
     }
 }
